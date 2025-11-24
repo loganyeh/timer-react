@@ -1,9 +1,10 @@
+import { useState, useRef, useEffect, createContext } from 'react';
 
 function Button({letter, bottom, left}) {
 
     return (
         <>
-            <div className={`h-28 w-28 absolute ${bottom} ${left} flex justify-center items-center font-mono text-black text-4xl border-2 border-blue-600 rounded-full hover:bg-gray-200 active:bg-gray-100`}>{letter}</div>
+            <div className={`h-28 w-28 absolute ${bottom} ${left} flex justify-center items-center font-mono text-black text-4xl border-2 border-blue-600 rounded-full hover:bg-gray-200 active:bg-gray-100 cursor-pointer`}>{letter}</div>
         </>
     )
 }

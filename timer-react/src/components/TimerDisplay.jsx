@@ -1,10 +1,18 @@
-import { useState, useRef, useEffect, createContext } from 'react';
+import { useState, useRef, useEffect, createContext, useContext } from 'react';
+import { MyContext } from './MyContext';
 
-function TimerDisplay({minutes, seconds}) {
+function TimerDisplay() {
+    const {minutes, setMinutes, seconds, setSeconds} = useContext(MyContext);
+
+    const resetTimerDisplayClick = () => {
+        console.clear();
+        setMinutes("00");
+        setSeconds("00");
+    };
 
     return(
         <>
-            <div className="h-3/5 w-full flex justify-center items-center relative">
+            <div onClick={resetTimerDisplayClick} className="h-3/5 w-full flex justify-center items-center relative cursor-pointer">
                 <div className="h-11/12 w-11/12 flex justify-center items-center mt-8 font-mono text-black text-9xl border-2 border-black rounded-4xl">
                     <span>{minutes}:{seconds}</span>
                 </div>

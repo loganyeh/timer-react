@@ -8,24 +8,10 @@ function Button({letter, bottom, left}) {
         let parseMinutes = Number(minutes);
         let parseSeconds = Number(seconds);
         if(letter === "M"){
-            parseMinutes++;
-            if(parseMinutes < 10){
-                setMinutes("0" + parseMinutes);
-            }
-            else{
-                setMinutes(parseMinutes);
-            }
-            // setMinutes(parseMinutes);
-            // setMinutes(prev => prev + 1);
+            setMinutes(prev => prev + 1);
         }
         else{
-            parseSeconds++;
-            if(parseSeconds < 10){
-                setSeconds("0" + parseSeconds);
-            }
-            else{
-                setSeconds(parseSeconds);
-            }
+            setSeconds(prev => prev + 1);
         }
     };
 

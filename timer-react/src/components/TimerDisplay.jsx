@@ -6,8 +6,8 @@ function TimerDisplay() {
 
     const resetTimerDisplayClick = () => {
         console.clear();
-        setMinutes("00");
-        setSeconds("00");
+        setMinutes(0);
+        setSeconds(0);
     };
 
     return(

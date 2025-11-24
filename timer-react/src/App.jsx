@@ -5,8 +5,8 @@ import StartStop from './components/StartStop';
 import { MyContext } from './components/MyContext';
 
 function App() {
-  const [minutes, setMinutes] = useState("00");
-  const [seconds, setSeconds] = useState("00");
+  const [minutes, setMinutes] = useState(12);
+  const [seconds, setSeconds] = useState(0);
 
   return (
     <>
